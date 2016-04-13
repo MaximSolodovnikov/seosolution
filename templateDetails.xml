@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="template">
+	<name>Seosolution</name>
+	<creationDate>13-04-2016</creationDate>
+	<author>Maxim Solodovnikov</author>
+	<authorEmail>MaximSolodovnikov@yandex.ua</authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>Maxim Solodovnikov 2016</copyright>
+	<license>GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>Template for Seosolution</description>
+	<files>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>language</folder>
+		<folder>html</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.PNG</filename>
+		<filename>template_thumbnail.png</filename>
+	</files>
+	<positions>
+		<position>main-menu</position>
+		<position>logo</position>
+		<position>slider</position>
+		<position>menu-category</position>
+		<position>recommended-products</position>
+		<position>list-of-categories-with-pictures</position>
+		<position>footer</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_seosolution.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_seosolution.sys.ini</language>
+	</languages>
+</extension>

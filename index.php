@@ -42,17 +42,17 @@ defined('_JEXEC') or die;
 
 		<div class="row">
 			<div class="col-md-4">
-				<h3>Меню категорий</h3>
+				<h3>С›РµРЅСЋ РєР°С‚РµРіРѕСЂРёР№</h3>
 				<ul class="nav nav-pills nav-stacked">
 					<jdoc:include type="modules" name="menu-category" />
 				</ul>
 			</div>
 			<div class="col-md-8">
-				<h3>Рекомендуемые товары</h3>
+				<h3>вЂ“РµРєРѕРјРµРЅРґСѓРµРјС‹Рµ С‚РѕРІР°СЂС‹</h3>
 				<div class="list-group">
 					<jdoc:include type="modules" name="recommended-products" />
 				</div>
-				<h3>Список категорий с картинками</h3>
+				<h3>вЂ”РїРёСЃРѕРє РєР°С‚РµРіРѕСЂРёР№ СЃ РєР°СЂС‚РёРЅРєР°РјРё</h3>
 				<div class="list-group">
 					<jdoc:include type="modules" name="list-of-categories-with-pictures" />
 				</div>

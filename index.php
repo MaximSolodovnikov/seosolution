@@ -1,5 +1,47 @@
 <?php
 defined('_JEXEC') or die;
+
+$app             = JFactory::getApplication();
+$doc             = JFactory::getDocument();
+$user            = JFactory::getUser();
+$this->language  = $doc->language;
+$this->direction = $doc->direction;
+
+// Getting params from template
+$params = $app->getTemplate(true)->params;
+
+// Detecting Active Variables
+$option   = $app->input->getCmd('option', '');
+$view     = $app->input->getCmd('view', '');
+$layout   = $app->input->getCmd('layout', '');
+$task     = $app->input->getCmd('task', '');
+$itemid   = $app->input->getCmd('Itemid', '');
+$sitename = $app->get('sitename');
+
+// Output as HTML5
+$doc->setHtml5(true);
+
+if($task == "edit" || $layout == "form" )
+{
+	$fullWidth = 1;
+}
+else
+{
+	$fullWidth = 0;
+}
+// Logo file or site title param
+if ($this->params->get('logoFile'))
+{
+	$logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
+}
+elseif ($this->params->get('sitetitle'))
+{
+	$logo = '<span class="site-title" title="' . $sitename . '">' . htmlspecialchars($this->params->get('sitetitle')) . '</span>';
+}
+else
+{
+	$logo = '<span class="site-title" title="' . $sitename . '">' . $sitename . '</span>';
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,14 +63,16 @@ defined('_JEXEC') or die;
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="header clearfix">
+				<div class="col-md-8">
 					<nav>
-						<ul class="nav nav-pills pull-left">
-							<jdoc:include type="modules" name="main-menu" />
-						</ul>
+						<jdoc:include type="modules" name="main-menu" />
 					</nav>
+				</div>
+				<div class="col-md-4">
 					<h3 class="text-muted">
-						<jdoc:include type="modules" name="logo" />
+						<a href="<?php echo $this->baseurl; ?>/">
+							<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/logo.png" alt="logo" />
+						</a>
 					</h3>
 				</div>
 			</div>
